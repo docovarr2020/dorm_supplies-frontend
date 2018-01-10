@@ -1,17 +1,20 @@
 extends template
 
 block content
-    h1 Welcome to Crimson Coupons
+    h1 Welcome to Dorm Supply Retailer
     form
-        h2 Sign up for Coupon Delivery
-    input(type='text' name='name' placeholder='Name') 
-    br
-    input(type='email' name='email' placeholder='Email') 
-    br
-    input(type='number' name='classYear' placeholder='Class year') 
-    br
-    input(type='phone' name='phone' placeholder='Phone Number') 
-    br
+        h2 Create Account
+        input(type='text' name='name' placeholder='Name') 
+        br
+        input(type='email' name='email' placeholder='Email') 
+        br
+        input(type='text' name='address' placeholder='Address') 
+        br
+        input(type='number' name='classYear' placeholder='Class year') 
+        br
+        input(type='password' name='password' placeholder='Password') 
+        br
+        button(type= 'button' onclick='register_user()' name='button') Register
 
 block postScript
     script submitOnEnterKey(submitForm);

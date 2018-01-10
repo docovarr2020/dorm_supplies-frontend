@@ -1,0 +1,17 @@
+extends template
+
+block content
+    h1 Add Item for Sale
+    form
+        h2 Item Information
+        input(type='text' name='name' placeholder='Name') 
+        br
+        input(type='number' name='price' placeholder='Price') 
+        br
+        input(type='number' name='quantity' placeholder='Current Stock') 
+        br
+        input(type='url' name='picture' placeholder='Picture URL') 
+        br
+        input(type='text' name='description' placeholder='Description') 
+        br
+        button(type= 'button' onclick='addItem()' name='button') Add
