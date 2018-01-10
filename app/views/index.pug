@@ -1,0 +1,17 @@
+extends template
+
+block content
+    h1 Welcome to Crimson Coupons
+    form
+        h2 Sign up for Coupon Delivery
+    input(type='text' name='name' placeholder='Name') 
+    br
+    input(type='email' name='email' placeholder='Email') 
+    br
+    input(type='number' name='classYear' placeholder='Class year') 
+    br
+    input(type='phone' name='phone' placeholder='Phone Number') 
+    br
+
+block postScript
+    script submitOnEnterKey(submitForm);
