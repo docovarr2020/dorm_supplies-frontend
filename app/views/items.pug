@@ -1,0 +1,14 @@
+extends template
+
+block content
+	.content
+		h1 items
+
+		table
+			.table-box
+				- var i = 0
+				each item in JSON.parse(items)
+					if i % 3 === 0
+						tr 
+					td #{item.price}
+					- i++

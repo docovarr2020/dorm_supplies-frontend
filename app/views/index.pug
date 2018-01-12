@@ -1,20 +1,75 @@
 extends template
 
 block content
-    h1 Welcome to Dorm Supply Retailer
-    form
-        h2 Create Account
-        input(type='text' name='name' placeholder='Name') 
-        br
-        input(type='email' name='email' placeholder='Email') 
-        br
-        input(type='text' name='address' placeholder='Address') 
-        br
-        input(type='number' name='classYear' placeholder='Class year') 
-        br
-        input(type='password' name='password' placeholder='Password') 
-        br
-        button(type= 'button' onclick='register_user()' name='button') Register
+    //h1 Welcome to Dorm Delivery
+    #navbar
+        span Crimson Coupons
+        #nb-items
+            a(href='')
+                span browse
+            a(href='')
+                span register
+            #nb-profpic
+    .tab
+        button.tablinks(onclick="openTab(event, 'Register')" id='defaultOpen') Register
+        button.tablinks(onclick="openTab(event, 'LogIn')") Log In
+
+    #Register.tabcontent
+        form
+            .form-box
+                h2 Register
+                .fb-item
+                    span Name
+                    br
+                    input(type='text' name='name' placeholder='Name') 
+                .fb-item
+                    span Email
+                    br
+                    input(type='email' name='email' placeholder='Email') 
+                .fb-item
+                    span Address
+                    br
+                    input(type='text' name='address' placeholder='Address') 
+                .fb-item
+                    span Class
+                    br
+                    input(type='number' name='classYear' placeholder='Class year') 
+                .fb-item
+                    span Password
+                    br
+                    input(type='password' name='password' placeholder='Password')
+                .fb-item
+                    span Confirm Password
+                    br
+                    input(type='password' name='confirm' placeholder='Confirm')
+                button#submit(type= 'button' onclick='register_user()' name='button') Register
+
+    #LogIn.tabcontent
+        form
+            .form-box
+                h2 Log In
+                .fb-item
+                    span Email
+                    br
+                    input(type='email' name='email' placeholder='Email') 
+                .fb-item
+                    span Password
+                    br
+                    input(type='password' name='password' placeholder='Password')
+                button#submit(type= 'button' onclick='login_user()' name='button') Log In
 
 block postScript
-    script submitOnEnterKey(submitForm);
+    script.
+        document.getElementById("defaultOpen").click()
+
+
+
+
+
+
+
+
+
+
+
+
